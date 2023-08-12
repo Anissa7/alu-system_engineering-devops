@@ -2,7 +2,7 @@ penSSH_7.2p2 Ubuntu-4ubuntu2.10, OpenSSL 1.0.2g  1 Mar 2016
 debug1: Reading configuration data /root/.ssh/config
 debug1: Reading configuration data /etc/ssh/ssh_config
 debug1: /etc/ssh/ssh_config line 19: Applying options for *
-debug1: Connecting to 54.226.140.197 [54.226.140.197] port 22.
+debug1: Connecting to 18.234.81.238 [18.234.81.238] port 22.
 debug1: Connection established.
 debug1: permanently_set_uid: 0/0
 debug1: identity file /root/.ssh/id_rsa type 1
@@ -24,7 +24,7 @@ debug1: Enabling compatibility mode for protocol 2.0
 debug1: Local version string SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.10
 debug1: Remote protocol version 2.0, remote software version OpenSSH_8.2p1 Ubuntu-4ubuntu0.4
 debug1: match: OpenSSH_8.2p1 Ubuntu-4ubuntu0.4 pat OpenSSH* compat 0x04000000
-debug1: Authenticating to 54.226.140.197:22 as 'ubuntu'
+debug1: Authenticating to 18.234.81.238 as 'ubuntu'
 debug1: SSH2_MSG_KEXINIT sent
 debug1: SSH2_MSG_KEXINIT received
 debug1: kex: algorithm: curve25519-sha256@libssh.org
@@ -48,7 +48,7 @@ debug1: Next authentication method: publickey
 debug1: Offering RSA public key: /root/.ssh/id_rsa
 debug1: Server accepts key: pkalg rsa-sha2-512 blen 279
 debug1: Authentication succeeded (publickey).
-Authenticated to 54.226.140.197 ([54.226.140.197]:22).
+Authenticated to 18.234.81.238 ([18.234.81.238]:22).
 debug1: channel 0: new [client-session]
 debug1: Requesting no-more-sessions@openssh.com
 debug1: Entering interactive session.
@@ -83,7 +83,7 @@ New release '22.04.2 LTS' available.
 Run 'do-release-upgrade' to upgrade to it.
 
 
-Last login: Fri Mar 24 13:51:41 2023 from 52.55.162.11
+Last login: Fri Mar 24 13:51:41 2023 from 18.234.81.238
 To run a command as administrator (user "root"), use "sudo <command>".
 See "man sudo_root" for details.
 
