@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# We use puppet to make changes in our configuration file
+# Does not use any password 
 
 file [ 'etc/ssh/ssh_config':
        ensure =>present
