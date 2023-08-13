@@ -1,14 +1,7 @@
 #!/usr/bin/env bash
-# Does not use any password 
-
-file [ 'etc/ssh/ssh_config':
-       ensure =>present,
-content =>"
-
-       #SSH client configuration
-       host*
-       Identityfile ~/.ssh/school
-       PasswordAuthentication no
-       ",
-
-] 
+#don't use any password
+exec { 'echo':
+  path    => 'usr/bin:/bin',
+  command => 'echo "    IdentityFile ~/.ssh/school\n    PasswordAuthentication no" >> /etc/ssh/ssh_config',
+  returns => [0,1],
+}
