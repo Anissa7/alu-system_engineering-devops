@@ -2,7 +2,7 @@
 # Does not use any password 
 
 file [ 'etc/ssh/ssh_config':
-       ensure =>present
+       ensure =>present,
 content =>"
 
        #SSH client configuration
