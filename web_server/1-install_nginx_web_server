@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# This Bash script installs Nginx on the web-01 server also configures it to serve a page with the string "Holberton School" at its root /,
+# and performs a check to ensure Nginx is responding correctly.
+
+# Update the package list and install Nginx
+sudo apt update
+sudo apt install -y nginx
+
+# Create a basic HTML page containing the desired string
+echo "Holberton School for the win!" | sudo tee /var/www/html/index.html > /dev/null
+
+# Make sure Nginx is listening on port 80 by modifying its default configuration
+sudo sed -i 's/^\(listen\s\+\)80;/\180;/' /etc/nginx/sites-available/default
+
+# Restart Nginx to apply the changes (can't use systemctl)
+sudo service nginx restart
+
+# Sleep briefly to allow Nginx to restart properly
+sleep 2
+
+# Test if Nginx is returning the correct page
+response=$(curl -s -I http://localhost)
+
+# Check if the response contains "200 OK" and "Server: nginx"
+if [[ $response == *"200 OK"* ]] && [[ $response == *"Server: nginx"* ]]; then
+    echo "Nginx installation and configuration successful!"
+else
+    echo "Something went wrong with Nginx installation or configuration."
+fi
+
